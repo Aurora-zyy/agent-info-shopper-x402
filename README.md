@@ -1,5 +1,220 @@
 # Agent Info Shopper 🤖
 
+**Pay Only for Useful Information** - An Intelligent Information Economy Demo on Monad Blockchain
+
+[![Powered by Monad](https://img.shields.io/badge/Powered%20by-Monad-000000?style=flat&logo=ethereum)](https://docs.monad.xyz/)
+[![Thirdweb](https://img.shields.io/badge/Powered%20by-Thirdweb-000000?style=flat)](https://thirdweb.com/)
+
+## 🚀 Project Overview
+
+An innovative AI Agent-driven information payment system that solves the traditional "Access = Pay" problem by implementing a smart "Useful = Pay" payment mechanism.
+
+**Core Features:**
+- 🤖 **Smart Agents**: 3 AI Agents with different strategies (Explorer/Trader/Investor)
+- 💰 **Micropayments**: Based on Monad's x402 Micropayment Protocol
+- 🎯 **Post-Payment Verification**: Get content first, judge value later
+- ⚡ **High Performance**: Monad's 10,000 TPS blockchain network
+
+## 🏗️ System Architecture
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   React Frontend │    │  Express Backend│    │  Monad Network  │
+│                 │    │                 │    │                 │
+│ • Agent Selection│◄──►│ • x402 Payment  │◄──►│ • Micropayment  │
+│ • Info Feed     │    │ • Content DB    │    │ • ~0 Gas Fees   │
+│ • TX Monitor    │    │ • Health Check  │    │ • Instant Conf. │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+## 🛠️ Quick Start
+
+### Prerequisites
+
+- Node.js >= 16
+- MetaMask or other Web3 wallet
+- Monad Testnet USDC (test tokens)
+
+### 1. Clone Repository
+
+```bash
+git clone <repository-url>
+cd agent-info-shopper-x402
+```
+
+### 2. Configure Environment
+
+Create `server/.env` file:
+
+```bash
+# Thirdweb API Key
+THIRDWEB_SECRET_KEY=your_thirdweb_secret_key_here
+
+# Monad Testnet Recipient Wallet
+RECIPIENT_WALLET=0x742d35Cc6634C0532925a3b844Bc454e4438f44e
+
+# Server Port
+PORT=3000
+```
+
+### 3. Install Dependencies
+
+```bash
+# Backend dependencies
+cd server && npm install
+
+# Frontend dependencies
+cd ../client && npm install
+```
+
+### 4. Start Demo
+
+```bash
+# Terminal 1: Start backend
+cd server && npm start
+
+# Terminal 2: Start frontend
+cd ../client && npm run dev
+```
+
+### 5. Access Application
+
+Open browser and visit: **http://localhost:5173**
+
+## 🧪 Testing Guide
+
+### Automated Testing
+```bash
+# Run server tests
+node test-server.js
+```
+
+### Manual Testing Steps
+
+1. **Connect Wallet**
+   - Click "🔌 Connect MetaMask"
+   - Switch to Monad Testnet network
+   - Ensure you have USDC test tokens
+
+2. **Select AI Agent**
+   - Curious Explorer: Academic-oriented
+   - Alpha Trader: Speculation-oriented
+   - Value Investor: Research-oriented
+
+3. **Run Demo**
+   - Click "▶️ Start Demo"
+   - Observe smart decisions and payment flow
+
+### Expected Results
+
+- ✅ Agent intelligently filters information based on KPIs
+- ✅ Only pays for truly valuable content
+- ✅ Automatic retry on payment failures
+- ✅ Real-time transaction status and statistics display
+
+## 🎯 Core Innovation
+
+### Traditional Model vs Our Model
+
+| Aspect | Traditional Model | Agent Info Shopper |
+|--------|------------------|-------------------|
+| Payment Timing | Pay first, get later | Get first, pay later |
+| Payment Basis | Access rights | Actual value |
+| Cost Control | Passive acceptance | Smart decisions |
+| User Experience | Information overload | Precise acquisition |
+
+### Technical Highlights
+
+- **Smart Pre-filtering**: Agents predict information value based on historical performance and KPIs
+- **Micropayment Technology**: x402 protocol enables low-cost instant payments
+- **Blockchain Advantage**: Monad's high performance ensures smooth experience
+- **Post-evaluation Mechanism**: Ensures payment perfectly matches value
+
+## 📊 Agent Strategy Details
+
+### 🎓 Curious Explorer
+- **KPIs**: Freshness • Knowledge Completeness • Curiosity Satisfaction
+- **Decision**: Prefers academic content, values knowledge accumulation
+- **Best For**: Researchers, lifelong learners
+
+### 📈 Alpha Trader
+- **KPIs**: Alpha Signal Strength • Trade Execution • Risk/Reward Ratio
+- **Decision**: Seeks high-risk, high-reward investment opportunities
+- **Best For**: Quantitative traders, venture investors
+
+### 💎 Value Investor
+- **KPIs**: Content Depth • Signal-to-Noise Ratio • Research Value
+- **Decision**: Values in-depth research and long-term value
+- **Best For**: Value investors, institutional researchers
+
+## 🔧 API Documentation
+
+### Health Check
+```http
+GET /health
+```
+
+Response:
+```json
+{
+  "status": "✅ Server running",
+  "chain": "Monad Testnet",
+  "chainId": 10143,
+  "recipientWallet": "0x...",
+  "endpoints": [...]
+}
+```
+
+### Content Retrieval (Requires Payment)
+```http
+GET /content/{contentId}
+Authorization: Bearer {x402-payment-token}
+```
+
+## 🛡️ Security Considerations
+
+- All payments processed through Thirdweb Facilitator
+- Sensitive configs managed via environment variables
+- Frontend doesn't store private keys or sensitive information
+- Complete retry and error handling for payment failures
+
+## 🚧 Known Limitations
+
+- Requires Web3 wallet connection
+- Depends on Monad Testnet availability
+- Demo data is simulated content
+- Production needs more Agent types
+
+## 📈 Future Extensions
+
+- [ ] Support for more AI Agent types
+- [ ] Integration with real information source APIs
+- [ ] Social recommendation features
+- [ ] Multi-chain deployment support
+- [ ] Agent learning and evolution implementation
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+## 📄 License
+
+ISC License
+
+## 🙏 Acknowledgments
+
+- **Monad**: Providing high-performance blockchain infrastructure
+- **Thirdweb**: Excellent Web3 development tools
+- **x402 Protocol**: Revolutionary micropayment protocol
+
+---
+
+**Built with ❤️ for Monad Hackathon**
+
+----- 中文版 -----
+
+# Agent Info Shopper 🤖
+
 **只为有用信息付费** - 基于 Monad 区块链的智能信息经济演示
 
 [![Powered by Monad](https://img.shields.io/badge/Powered%20by-Monad-000000?style=flat&logo=ethereum)](https://docs.monad.xyz/)
